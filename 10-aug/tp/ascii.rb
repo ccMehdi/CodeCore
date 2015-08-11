@@ -11,4 +11,5 @@ x.times do
 
   puts star_string.center(width)
     star_string = star_string + "O "
+    
 end
