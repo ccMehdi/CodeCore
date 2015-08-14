@@ -33,3 +33,37 @@ git commit -m "write a message in here"
 
 ```
 
+## Classes and OOP Review
+Let's create a couple of classes. We want to think about objects and how they interact. A nice example might be Pacman eating balls, and ghosts.
+
+Think about what objects we might need, and how they might interact.
+
+We might want to have three classes:
+  - Pacman 
+  - Ghost
+  - Ball
+
+Let's start with the ball class. Ball object should instantiate with a default type of 'regular', if no argument is passed. 
+
+```ruby
+class Ball
+  def initialize(type='regular')
+     @type = type
+  end
+end
+```
+
+Now, think about Ghost. Ghosts can be read, blue, yellow or pink. Let's instantiate ghost without any arguments, and a random color among the 4 available.
+
+```ruby
+class Ghost
+  
+  attr_reader :color
+  def initialize
+    @color = %w(red blue yellow pink).sample
+  end
+
+end
+```
+
+

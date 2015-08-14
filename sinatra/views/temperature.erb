@@ -1,0 +1,13 @@
+<h1>Temperature</h1>
+
+<form action="/submit_contact" method="post">
+  <input type="text" placeholder="temperature" name="temp">
+  <br>
+  <br>
+  <input type="submit">
+
+</form>
+
+<% if @f_degre %>
+The temperature in F is <%= @f_degre %>
+<% end %>

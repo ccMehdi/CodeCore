@@ -7,13 +7,12 @@ print "Please input a number: "
 
 num = gets.chomp.to_i
 
-fib_num = 0
-puts sec_num = 1
-puts next_number =  fib_num + sec_num
-num.times do |x|
-  
+low_number = 0
+puts high_number = 1
 
+(num -1).times do |x|
+  new_number = low_number + high_number
+  puts new_number
+  low_number = high_number
+  high_number = new_number
 end
-
-#puts prev_num
-#puts next_number
