@@ -1,0 +1,40 @@
+<div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Team Picker.</h2>
+        <h4>Please enter the name of the team members:</h4>
+        <br>
+        <form class="" action="/team_picker" method="post">
+          <textarea name="members" rows="2" cols="100"><%= params["members"] %></textarea>
+          <br>
+          <br>
+          <label for="team_number">Enter the amount of team: &nbsp;</label>
+          <input id="team_number" type="text" name="team_number" value="<%= params["team_number"] %>">
+          <br>
+          <br>
+          <input class="btn btn-danger" type="submit" name="submit" value="Split them up!!!">
+          <br>
+          <br>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <% if @arr %>
+          <% keys = @arr.keys %>
+            <% @arr.each do |x, v| %>
+            <div class="col-xs-1 alert alert-success" style="margin-right: 5px;">
+            <%="<b>Team: #{x} </b>" %>
+            <br>
+            <% @arr[x].each do |v| %>
+              <%= "#{v}" %>
+              <br>
+            <% end %>
+            </div>
+          <% end %>
+        <%  end %>
+      </div>
+    </div>
+  </div>
+</div>

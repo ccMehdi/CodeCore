@@ -1,0 +1,23 @@
+<div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10">
+        <h2>Pick a random winner.</h2>
+        <h4>Please enter the name separate with a comma</h4>
+        <form class="" action="/pick_random" method="post">
+          <textarea name="random_name" cols="150" rows="2"><%= if @random_name
+            @random_name
+          end %></textarea>
+          <br>
+          <br>
+          <input class="btn btn-danger" type="submit" name="submit" value="Pick Winner">
+        </form>
+      </div>
+      <div class="col-md-6">
+        <% if @winner  %>
+          <h4 class="alert alert-success" role="alert">The winner is: <%= @winner %></h4>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

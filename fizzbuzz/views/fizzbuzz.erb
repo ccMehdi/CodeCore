@@ -1,0 +1,26 @@
+<div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10">
+        <h2>FizzBuzz Again.</h2>
+        <h4>Please enter enter two number from 1 to 100</h4>
+        <br>
+        <form class="" action="/fizzbuzz" method="post">
+          <label for="number1">Enter the first number: &nbsp;</label>
+          <input id="number1" type="text" name="number1" value="<%= @start_number %>">
+          <br>
+          <label for="number2">Enter the second number: &nbsp;</label>
+          <input id="number2" type="text" name="number2" value="<%= @end_number %>">
+          <br>
+          <br>
+          <input class="btn btn-danger" type="submit" name="submit" value="Let's get Fizzing!!!">
+        </form>
+      </div>
+      <div class="col-md-10">
+        <% if @arr  %>
+          <h4 class="alert alert-success" role="alert"> <%= @arr %></h4>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

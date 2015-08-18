@@ -1,0 +1,23 @@
+<div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10">
+        <h2>Generation of your car.</h2>
+        <h4>Please enter the yeat of your car:</h4>
+        <br>
+        <form class="" action="/car_info" method="post">
+          <label for="year">Enter the first number: &nbsp;</label>
+          <input id="year" type="text" name="year" value="<%= params[:year] %>">
+          <br>
+          <br>
+          <input class="btn btn-danger" type="submit" name="submit" value="Let's check it out!!!">
+        </form>
+      </div>
+      <div class="col-md-10">
+        <% if @results  %>
+          <h4 class="alert alert-success" role="alert"> <%= @results %></h4>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

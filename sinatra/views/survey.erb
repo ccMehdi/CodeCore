@@ -1,0 +1,26 @@
+<h1>Personality Survey</h1>
+<form action="/submit_survey" method="post">
+  <ol>
+    <li>You work best:<br>
+      <input type="radio" id="with-deadline" name="work-best" value="deadline"
+      <label for="with-deadline">With Deadline</label><br>
+      <input type="radio" id="without-deadline" name="work-best" value="without-deadline"
+      <label for="with-deadline">Without Deadline</label>
+    </li>
+    <br>
+    <li>You consider yourself more:<br>
+      <input type="radio" id="rational" name="consider-yourself" value="rational"
+      <label for="rational">Rational</label><br>
+      <input type="radio" id="compassionate" name="consider-yourself" value="compassionate"
+      <label for="compassionate">Compassionate</label>
+    </li>
+    <br>
+    <li>You are more interested in:<br>
+      <input type="radio" id="ideas" name="interested-in" value="ideas"
+      <label for="ideas">Ideas</label><br>
+      <input type="radio" id="facts" name="interested-in" value="facts"
+      <label for="facts">Facts</label>
+    </li>
+  </ol>
+  <input type="submit" value="Submit your survey">
+</form>
