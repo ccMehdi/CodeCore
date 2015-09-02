@@ -1,0 +1,7 @@
+<h1><%= @post.title %></h1>
+<hr>
+<p>Catgeory: <%= @category.name %></p>
+<p>Snippet:</p>
+<div style="background-color: white;">
+<p><%= markdown(@post.work) %></p>
+</div>

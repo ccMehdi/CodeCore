@@ -1,0 +1,52 @@
+/*body {
+  background: url("http://gardentherapy.ca/wp-content/uploads/2009/10/Fall-Foliage-landscape-Large.JPG");
+  background-size: cover;
+  margin-top:
+
+}
+
+.full-width-div {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    left: 0;
+    background-color: #ff0000;
+    opacity: 0.5
+    top: 0;
+}
+
+
+
+p {
+  font-size: 27px;
+  text-align: center;
+  color: white;
+  padding: 0px;
+}*/
+
+
+body {
+  padding: 0px;
+  margin: 0px;
+
+}
+
+.backgroud {
+  background: url("http://gardentherapy.ca/wp-content/uploads/2009/10/Fall-Foliage-landscape-Large.JPG");
+  background-size: 100%;
+  height: 900px;
+}
+
+.top-area {
+    width: 100%;
+    height: 15%;
+    text-align: center;
+    background-color: #ff0000;
+    opacity: 0.65
+}
+
+p {
+  font-size: 27px;
+  color: white;
+
+}*/

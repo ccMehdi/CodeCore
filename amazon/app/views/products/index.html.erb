@@ -1,0 +1,4 @@
+<h1>All the Questions</h1>
+<% @products.each do |q| %>
+  <h5><%= link_to q.title, product_path(q) %></h5>
+<% end %>

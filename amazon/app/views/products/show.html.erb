@@ -1,0 +1,31 @@
+<h1><%= @product.title %></h1>
+<hr>
+<p><%= @product.description %></p>
+<br>
+Price: <%= number_to_currency(@product.price)  %> |
+<%= link_to "Edit this item", edit_product_path(@product) %> |
+<%= link_to "Delete this item", product_path(@product), method: :delete  %>
+<h2>Comments</h2>
+<% if @comment.errors.any? %>
+    <ul>
+        <% @comment.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+        <% end %>
+      </ul>
+      <% end %>
+  <%# <%= form_for @answer, url: question_answers_path(@question) do |f| %>
+  <%= form_for [@product, @comment] do |f| %>
+    <div class="form-group">
+        <%= f.label :body %>
+        <%= f.text_area :body, class: "form-control" %>
+    </div>
+    <%= f.submit "Create Answer", class: "btn btn-success" %>
+  <% end %>
+  <h2>Comments</h2>
+  <% @product.comments.each do |ans| %>
+  <div class="well">
+    <%= ans.body %>
+    <%= link_to "Delete", product_comment_path(@product, ans), method: :delete,
+    data: {confirm: "Are you sure"}, class: "btn btn-danger" %>
+  </div>
+  <% end %>

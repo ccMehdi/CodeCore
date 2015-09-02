@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Jquery Playground</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  </head>
+  <body>
+
+  </body>
+</html>
+
+
+$("tr").mouseenter(fucntion() {
+  $("tr").attr("class", "highlight");
+});
+
+
+$("#button-1")on("click", function() {
+  $(".shape").remove();
+});
+
+$("#button-2").on("click", function() {
+  $(this).attr("disbale", true);
+});
+
+$("#button-3").on("click", function() {
+  $("#button-message").html("Button 3 was clicked");
+});
+
+<p id="button-message">Button Message</p>
+
+$(".shape").on("click", function() {
+  console.log($(this).attr("class"));
+});
+
+$(".shape").on("click", function() {
+  $(this).hide();
+});
+
+$(".shape").on("click", function() {
+  $(this).unwrap();
+});
+
+$(".container").on("click", function() {
+  $(this).children().remove();
+});
+
+$("a").on("click", function() {
+  console.log("Your mouse entered a link to:" + $(this).attr("href"))
+});
+
+$(".button").on("click", function() {
+    $("#button-message").html("Button " + $(this).attr("id") + " was clicked");
+});

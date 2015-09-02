@@ -1,0 +1,14 @@
+<h1>All Your Snippet</h1>
+<table class="table table-hover">
+  <tr>
+    <th>Category Name</th>
+    <th># of Snippets</th>
+    <th>Action</th>
+  </tr>
+<% @categories.each do |c| %>
+  <tr>
+    <td><%= c.name %></td><td><%= "#{c.posts.count} Snippets" %></td><td><%= link_to "View Snippets", category_path(c) %></td>
+  </tr>
+<% end %>
+</table>
+<%= paginate @categories %>
